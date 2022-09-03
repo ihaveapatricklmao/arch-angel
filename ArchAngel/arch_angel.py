@@ -1,4 +1,5 @@
 import json
+import sys
 import os
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -7,6 +8,11 @@ from PyQt5.QtWebEngineWidgets import *
 
 print("starting browser...")
 
+bookmark_file = 'bookmark.json'
+
+application = QApplication(sys.argv)
+app_icon = QSystemTrayIcon(QIcon('fatratbeinggrabbed.png'), parent=application)
+app_icon.show()
 
 class WebBrowser(QMainWindow):
 
